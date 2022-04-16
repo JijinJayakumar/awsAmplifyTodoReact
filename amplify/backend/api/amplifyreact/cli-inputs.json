@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "amplifyreact",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "C:\\inapp\\amplifytutorials\\react\\awsamplifyreactapp\\amplify\\backend\\api\\amplifyreact\\schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 7,
+      "apiKeyExpirationDate": "2022-04-23T10:45:59.245Z",
+      "keyDescription": ""
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "AMAZON_COGNITO_USER_POOLS",
+        "cognitoUserPoolId": "authamplifyreact"
+      }
+    ],
+    "conflictResolution": {
+      "defaultResolutionStrategy": {
+        "type": "AUTOMERGE"
+      }
+    }
+  }
+}
