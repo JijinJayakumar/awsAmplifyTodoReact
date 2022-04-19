@@ -3,7 +3,7 @@ import { Amplify, Auth } from "aws-amplify";
 import { AmplifyProvider, Authenticator } from "@aws-amplify/ui-react";
 import { NextUIProvider } from "@nextui-org/react";
 
-import "@aws-amplify/ui-react/styles.css"; // default theme
+import "@aws-amplify/ui-react/styles.css";
 import "../styles/globals.css";
 import "@fontsource/inter/variable.css";
 import awsExports from "../src/aws-exports";
@@ -16,10 +16,10 @@ function MyApp({ Component, pageProps }) {
   /**
    * set auth protection on all pages
    */
-  const [user, setUser] = useState(null); //auth
+  const [user, setUser] = useState(null);
+  console.log("user", { user });
 
   useEffect(() => {
-    // Accessing the user session on the client
     Auth.currentAuthenticatedUser()
       .then((user) => {
         console.log("User: ", user);
@@ -35,14 +35,7 @@ function MyApp({ Component, pageProps }) {
       </NextUIProvider>
     );
   }
-  //  if (
-  //    pageProps.protected &&
-  //    user &&
-  //    pageProps.userTypes &&
-  //    pageProps.userTypes.indexOf(user.type) === -1
-  //  ) {
-  //    return <Layout>Sorry, you don't have access</Layout>;
-  //  }
+
   /**
    * set auth protection on all pages ends
    *
@@ -55,8 +48,7 @@ function MyApp({ Component, pageProps }) {
           <NextUIProvider>
             <AmplifyProvider>
               <Authenticator.Provider>
-
-              <Component {...pageProps} />
+                <Component {...pageProps} />
               </Authenticator.Provider>
             </AmplifyProvider>
           </NextUIProvider>
@@ -78,14 +70,5 @@ function MyApp({ Component, pageProps }) {
     </AuthContext.Provider>
   );
 }
-
-// const linkStyle = css`
-//   margin-right: 20px;
-//   cursor: pointer;
-// `;
-
-// const navStyle = css`
-//   display: flex;
-// `;
 
 export default MyApp;

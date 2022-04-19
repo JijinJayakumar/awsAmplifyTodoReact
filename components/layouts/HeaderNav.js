@@ -53,7 +53,10 @@ const HeaderNav = () => {
         </a>
         <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
           <Link href="/todo">
-            <a className="mr-5 hover:text-gray-900">Todos</a>
+            <a className="mr-5 hover:text-gray-900">Todos GraphQL</a>
+          </Link>
+          <Link href="/todo_rest">
+            <a className="mr-5 hover:text-gray-900">Todos Rest</a>
           </Link>
 
           {/* <Link href="/profile">

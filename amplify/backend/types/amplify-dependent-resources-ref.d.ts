@@ -15,6 +15,11 @@ export type AmplifyDependentResourcesAttributes = {
             "GraphQLAPIKeyOutput": "string",
             "GraphQLAPIIdOutput": "string",
             "GraphQLAPIEndpointOutput": "string"
+        },
+        "todosApi": {
+            "RootUrl": "string",
+            "ApiName": "string",
+            "ApiId": "string"
         }
     },
     "hosting": {
@@ -27,6 +32,24 @@ export type AmplifyDependentResourcesAttributes = {
             "CloudFrontDomainName": "string",
             "CloudFrontSecureURL": "string",
             "CloudFrontOriginAccessIdentity": "string"
+        }
+    },
+    "function": {
+        "todosApiLambdaFunction": {
+            "Name": "string",
+            "Arn": "string",
+            "Region": "string",
+            "LambdaExecutionRole": "string"
+        }
+    },
+    "storage": {
+        "dynamoTodoDb": {
+            "Name": "string",
+            "Arn": "string",
+            "StreamArn": "string",
+            "PartitionKeyName": "string",
+            "PartitionKeyType": "string",
+            "Region": "string"
         }
     }
 }
